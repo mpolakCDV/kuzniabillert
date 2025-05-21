@@ -23,6 +23,7 @@ W projekcie wykorzystywałem m.in:
 - Metodologię BEM
 - Praktyki SEO
 - znane mi zasady UX/UI
+- mumifikacja kodu css i js
 
 ## Uwaga! Pewne funkcjonalności mogą nie działać!
 
