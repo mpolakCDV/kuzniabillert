@@ -1,0 +1,36 @@
+@use './colors' as *;
+
+@mixin nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+}
+
+@mixin heroImg($img) {
+	position: relative;
+	background-image: url($img);
+	background-position: center;
+	background-size: cover;
+	z-index: 0;
+}
+
+@mixin shadowImg {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: $shadow;
+	z-index: -1;
+}
+
+@mixin input {
+    padding: .5em;
+	width: 100%;
+    border: 2px solid $white;
+    border-radius: 3px;
+    background-color: transparent;
+    color: $white;
+}

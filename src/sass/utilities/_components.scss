@@ -1,0 +1,58 @@
+@use './colors' as *;
+
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main__heading {
+    margin: 4em 0 1.5em;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 300;
+    font-size: 3rem;
+}
+
+.section {
+    margin: 0 1.5em;
+    background-color: $black;
+
+    &__heading {
+        margin: 1.5em 0;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 300;
+        font-size: 3rem;
+    }
+
+    &__line {
+        width: 100%;
+        max-width: 1200px;
+        height: 2px;
+        margin: 0.5em auto 0.5em;
+        border-radius: 3px;
+        background-color: $white;
+    }
+}
+
+@media (width >= 576px) {
+    .section {
+        &__heading {
+            margin-top: 2em;
+        }
+    }
+}
+
+@media (width >= 992px) {
+    .section {
+        &__heading {
+            margin: 4em 0 2em;
+            font-size: 3.5rem;
+        }
+
+        &__line {
+            margin-top: 2em;
+        }
+    }
+}

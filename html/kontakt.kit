@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | Kuźnia Billert</title>
+    <meta name="description" content="Indywidualne podejście do klienta. Zapraszam do kontaktu telefonicznego lub mailowego. Nasza firma mieści się w Poznaniu na ul. uhashu 12">
+
+    <!-- @include styles.kit -->
+</head>
+<body>
+    <!-- @include nav.kit -->
+
+    <main>
+        <section class="section contact">
+            <h1 class="main__heading">Kontakt</h1>
+            <div class="wrapper">
+                <p class="contact__text contact__text--one">Chciałbyś złożyć zamówienie, zaproponować współpracę lub po prostu masz pytania?</p>
+                <p class="contact__text contact__text--two">Skorzystaj z fromularza:</p>
+
+                <div class="contact__container">
+                    <form action="message.php" method="post" class="contact__form">
+                        <div class="contact__box-inputs">
+                            <input type="text" name="name" placeholder="Podaj imię" class="contact__input contact__input--one">
+                            <input type="text" name="email" placeholder="Podaj emial" class="contact__input contact__input--two">
+                        </div>
+                        <div class="contact__message">
+                            <textarea name="message" placeholder="Napisz swoją wiadomość" class="contact__textarea"></textarea>
+                        </div>
+                        <div class="contact__button-area">
+                            <button type="Submit" class="contact__button">Wyślij</button>
+                            <span class="contact__info">Wysyłanie...</span>
+                        </div>
+                    </form>
+                    <p class="contact__privacy-policy">Twoje dane osobowe będą przetwarzane w celu obsługi zgłoszeń wysyłanych za pośrednictwem formularza kontaktowego oraz udzielania odpowiedzi na zapytania. <a href="polityka-prywatnosci.html" class="contact__privacy-policy--link">Sprawdź jak i w jakim celu przetwarzamy twoje dane</a>.</p>
+                </div>
+
+                <div class="contact__box">
+                    <div class="contact__shadow"></div>
+                    <div class="contact__minibox">
+                        <p class="contact__text">Nr telefonu:</p>
+                        <p class="contact__paragraph contact__phonenumber">
+                            <a href="tel:+48 726 888 977" target="_blank" rel="noopener" class="contact__link">+48 726 888 977</a>
+                        </p>
+                    </div>
+                    <div class="contact__minibox">
+                        <p class="contact__text">Mail:</p>
+                        <p class="contact__paragraph contact__mail"><a href="mailto:kuznia.billert@gmail.com" target="_blank" rel="noopener" class="contact__link">kuznia.billert@gmail.com</a></p>
+                    </div>
+                    <div class="contact__minibox">
+                        <p class="contact__text">Mój warsztat:</p>
+                        <p class="contact__paragraph contact__place">ul. Trzecka 11, 63-004 Gowarzewo</p>
+                    </div>
+                    <div class="contact__minibox contact__socialmedia">
+                        <a href="https://www.facebook.com/apkbillert/?checkpoint_src=any" target="_blank" rel="noopener" class="contact__socialmedia-link"><img src="../dist/img/icons/facebook.svg" alt="Ikona Facebook'a" class="aboutme__socialmedia-img"></a>
+                        <a href="https://www.instagram.com/kuznia.billert/" target="_blank" rel="noopener" class="contact__socialmedia-link"><img src="../dist/img/icons/instagram.svg " alt="Ikona Instagram'a" class="aboutme__socialmedia-img"></a>
+                        <a href="https://www.youtube.com/channel/UC1k0Tbh3rH7Lc1WN5zYXo5g" target="_blank" rel="noopener" class="contact__socialmedia-link"><img src="../dist/img/icons/youtube.svg" alt="Ikona Youtube'a" class="aboutme__socialmedia-img"></a>
+                    </div>
+                </div>
+
+            </div>
+            
+        
+            <div class="section__line"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__copyrights">
+            &copy;<span class="footer__year"></span> Kuźnia Billert
+        </p>
+    </footer>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- GlowCockies -->
+    <script src="https://cdn.jsdelivr.net/gh/manucaralmo/GlowCookies@3.1.8/src/glowCookies.min.js"></script>
+    <script>
+        glowCookies.start('pl', {
+            style: 3,
+            analytics: 'G-6MG6RFTD8K',
+            policyLink: './polityka-prywatnosci.html',
+            bannerBackground: '#0000009c',
+            bannerColor: '#fff',
+            acceptBtnColor: '#fff',
+            acceptBtnBackground: '#aa3848',
+            rejectBtnBackground: '#fff',
+            rejectBtnColor: '#000',
+        });
+    </script>
+
+    <script src="../dist/js/script.min.js"></script>
+</body>
+</html>

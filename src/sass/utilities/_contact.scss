@@ -1,0 +1,316 @@
+@use './colors' as *;
+@use './mixins' as *;
+@use './components' as *;
+
+
+.contact {
+    &__box {
+        @include heroImg('../../../dist/img/anvil_and_nuts_2_small.jpg');
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1em;
+        margin-bottom: 2em;
+        align-items: center;
+        border: 2px solid $white;
+        border-radius: 3px;
+    }
+
+    &__shadow {
+        @include shadowImg;
+        background-color: $dark-shadow;
+    }
+
+    &__minibox {
+        text-align: center;
+    }
+
+    &__text {
+        margin-bottom: 0;
+        font-size: 2rem;
+        text-transform: uppercase;
+
+        &--one {
+            text-align: center;
+            text-transform: none;
+        }
+        
+        &--two {
+            margin-bottom: 1em;
+            text-align: center;
+            text-transform: none;
+        }
+    }
+
+    &__paragraph {
+        margin-bottom: 1em;
+        font-weight: bold;
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+
+    &__socialmedia {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1em 0;
+        
+        &-link {
+            display: block;
+            width: 3em;
+            margin: 0 .5em;
+            transition: scale .2s;
+
+            &:hover {
+                scale: 1.1;
+            }
+        }
+
+        &-img {
+            width: 100%;
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__form {
+        padding: 1em;
+        margin-bottom: .5em;
+        border: 2px solid #fff;
+        border-radius: 3px;
+        background-color: none;
+    }
+
+    &__box-inputs {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__input {
+        @include input;
+
+        &--two {
+            margin: 1em 0;
+        }
+
+        &:active, &:focus {
+            outline: none;
+        }
+
+        &::placeholder {
+            color: $white;
+            opacity: .8;
+        }
+    }
+
+    &__textarea {
+        @include input;
+        height: 10em;
+        resize: vertical;
+
+        &:active {
+            outline: none;
+        }
+        
+        &:focus {
+            outline: none;
+            background: transparent;
+        }
+
+        &::placeholder {
+            color: $white;
+            opacity: .8;
+        }
+    }
+
+    &__button-area {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__button {
+        padding: .5em 1em;
+        width: 100%;
+        margin-top: 1em;
+        font-size: 2rem;
+        text-transform: uppercase;
+        border: 2px solid $white;
+        border-radius: 5px;
+        background-color: transparent;
+        color: $white;
+        transition: background-color .2s, color .2s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $white;
+            color: $black;
+        }
+    }
+
+    &__info {
+        display: none;
+        margin-top: 1em;
+        font-size: 1.3rem;
+    }
+
+    &__privacy-policy {
+        margin-bottom: 3em;
+        font-size: 1rem;
+
+        &--link {
+            color: $red;
+            transition: color .2s;
+
+            &:hover {
+                color: $dark-red;
+            }
+        }
+    }
+}
+
+// ===================================================
+
+@media (width >= 576px) {
+    .contact {
+        &__box {
+            width: 25em;
+            margin: 0 auto 2em;
+        }
+
+        &__box-inputs {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+        }
+
+        &__input {
+            &--one {
+                grid-column: 1/4;
+            }
+
+            &--two {
+                grid-column: 5/-1;
+                margin: 0;
+            }
+        }
+
+        &__textarea {
+            margin-top: 1em;
+        }
+    }
+}
+
+@media (width >= 768px) {
+    .contact {
+        &__box {
+            width: 40em;
+            height: 30em;
+            margin: 0 auto 3em;
+        }
+
+        &__socialmedia {
+            &-link {
+                width: 4em;
+                margin: 0 1em;
+            }
+        }
+
+        &__container {
+            align-items: center;
+        }
+
+        &__form {
+            width: 40em;
+        }
+
+        &__button-area {
+            flex-direction: row;
+        }
+
+        &__button {
+            width: auto;
+        }
+
+        &__info {
+            margin-left: 2em;
+        }
+
+        &__privacy-policy {
+            width: 60em;
+        }
+    }
+}
+
+@media (width >= 992px) {
+    .contact {
+        &__box {
+            @include heroImg('../../../dist/img/anvil_and_nuts_2.jpg');
+            margin-bottom: 5em;
+        }
+
+        &__text { 
+            &--one {
+                margin-top: 5em;
+                margin-bottom: 1em;
+            }
+
+            &--two {
+                margin-bottom: 2em;
+            }
+        }
+
+        &__socialmedia {
+            margin: 3em 0;
+        }
+
+        &__box-inputs {
+            display: grid;
+            grid-template-columns: repeat(13, 1fr);
+        }
+
+        &__input {
+            &--one {
+                grid-column: 1/6;
+            }
+
+            &--two {
+                grid-column: 9/-1;
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media (width >= 1200px) {
+    .contact {
+        &__box {
+            width: 50em;
+            height: 35em;
+            margin: 0 auto 5em;
+        }
+
+        &__paragraph {
+            margin-bottom: 3em;
+        }
+
+        &__socialmedia {
+            &-link {
+                width: 6em;
+            }
+        }
+
+        &__form {
+            width: 50em;
+        }
+
+        &__privacy-policy {
+            width: 70em;
+        }
+    }
+}

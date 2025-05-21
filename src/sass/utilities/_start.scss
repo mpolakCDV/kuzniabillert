@@ -1,0 +1,61 @@
+@use './colors' as *;
+@use './mixins' as *;
+@use './components' as *;
+
+.start {
+    &__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 4em;
+    }
+
+    &__img {
+        width: 100%;
+        border-radius: 3px;
+    }
+
+    &__heading {
+        margin: 1em 0;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 300;
+    }
+}
+
+@media (width >= 576px) {
+    .start {
+        &__text {
+            text-align: justify;
+        }
+    }
+}
+
+@media (width >= 768px) {
+    .start {
+        &__text {
+            margin-bottom: 2em;
+        }
+    }
+}
+
+@media (width >= 992px) {
+    .start {
+        &__box {
+            flex-direction: row;
+            justify-content: space-around;
+            margin-bottom: 4em;
+        }
+
+        &__img {
+            max-width: 45%;
+        }
+
+        &__content {
+            max-width: 45%;
+            margin-left: 1em;
+        }
+    }
+}

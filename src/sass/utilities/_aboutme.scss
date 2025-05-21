@@ -1,0 +1,136 @@
+@use './colors' as *;
+@use './mixins' as *;
+
+.aboutme {
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__img {
+        width: 20em;
+        border-radius: 3px;
+    }
+
+    &__heading {
+        margin: 2em 0 1em;
+        text-align: center;
+        font-weight: 300;
+        font-size: 2rem;
+    }
+
+    &__text {
+        width: 100%;
+        max-width: 40em;
+        margin: 0 auto;
+        text-align: justify;
+
+        &-strong {
+            font-weight: bold;
+        }
+    }
+
+    &__list {
+        max-width: 40em;
+        margin: 1em auto;
+    }
+
+    &__item {
+        margin: 1em;
+    }
+
+    &__paragraph {
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
+    }
+
+    &__socialmedia {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1em 0;
+        
+        &-link {
+            display: block;
+            width: 3em;
+            margin: 0 .5em;
+            transition: scale .2s;
+
+            &:hover {
+                scale: 1.1;
+            }
+        }
+
+        &-img {
+            width: 100%;
+        }
+    }
+}
+
+@media (width >= 576px) {
+    .aboutme {
+        &__img {
+            width: 30em;
+        }
+
+        &__heading {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+@media (width >= 768px) {
+    .aboutme {
+        &__img {
+            width: 40em;
+        }
+
+        &__text {
+            max-width: 40em;
+        }
+
+        &__socialmedia {
+            &-link {
+                width: 4em;
+                margin: 0 1em;
+            }
+        }
+    }
+}
+
+@media (width >= 992px) {
+    .aboutme {
+        &__heading {
+            font-size: 3rem;
+        }
+
+        &__socialmedia {
+            margin: 3em 0;
+        }
+    }
+}
+
+@media (width >= 1200px) {
+    .aboutme {
+        &__text {
+            max-width: none;
+        }
+
+        &__list {
+            max-width: fit-content;
+        }
+
+        &__paragraph {
+            margin-top: 3em;
+            font-size: 2rem;
+        }
+    
+        &__socialmedia {
+            &-link {
+                width: 6em;
+            }
+        }
+    }
+}

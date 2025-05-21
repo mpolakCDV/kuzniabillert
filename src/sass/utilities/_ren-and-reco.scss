@@ -1,0 +1,118 @@
+@use './colors' as *;
+@use './mixins' as *;
+@use './components' as *;
+
+.ren-and-reco {
+    margin-top: 8em;
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2em;
+    }
+
+    &__heading {
+        margin: 1em 0;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 2.5rem;
+    }
+
+    &__text {
+        text-align: justify;
+    }
+
+    &__img {
+        &--inside {
+            width: 300px;
+            border-radius: 3px;
+        }
+    }
+
+    &__gallery {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1em;
+        width: 100%;
+        margin: 2.5em 0;
+
+        &-img {
+            width: 100%;
+            margin: .5em 0 .5em;
+            border-radius: 3px;
+        }
+    }
+    
+    &__column {
+        &--one {
+            grid-column: 1/2;
+        }
+
+        &--two {
+            grid-column: 2/3;
+            grid-column: 1/2;
+        }
+
+        &--three {
+            grid-column: 3/4;
+            grid-column: 1/2;
+        }
+    }
+}
+
+@media (width >= 576px) {
+    .ren-and-reco {
+        &__img {
+            &--inside {
+                width: 400px;
+            }
+        }
+
+        &__column {
+            &--one {
+                grid-column: 1/2;
+            }
+    
+            &--two {
+                grid-column: 2/3;
+            }
+    
+            &--three {
+                grid-column: 3/4;
+            }
+        }
+    }
+}
+
+@media (width >= 768px) {
+    .ren-and-reco {
+        &__img {
+            &--inside {
+                width: 500px;
+            }
+        }
+    }
+}
+
+@media (width >= 992px) {
+    .ren-and-reco {
+        &__box {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3em;
+        }
+
+        &__content {
+            margin-left: 1.5em;
+        }
+
+        &__gallery {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
